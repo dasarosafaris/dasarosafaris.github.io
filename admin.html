@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin - Dasaro Safaris</title>
+<style>
+body{font-family:Arial;background:#f0f2f5;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+.login{background:white;padding:40px;border-radius:15px;box-shadow:0 4px 20px rgba(0,0,0,0.1);width:300px;text-align:center}
+input{width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:8px;box-sizing:border-box}
+button{width:100%;padding:12px;background:#2c5530;color:white;border:none;border-radius:8px;font-weight:bold;cursor:pointer}
+.hidden{display:none}
+.dashboard{text-align:left;max-width:800px;margin:auto;background:white;padding:20px;border-radius:10px}
+</style>
+</head>
+<body>
+<div id="loginBox" class="login">
+<h2>Dasaro Safaris Admin</h2>
+<p>Ingiza Password</p>
+<input type="password" id="pass" placeholder="Password">
+<button onclick="login()">Login</button>
+<p style="font-size:12px;color:gray">Hint: admin123 (utaibadilisha baadaye)</p>
+</div>
+
+<div id="dash" class="hidden">
+<div class="dashboard">
+<h1>Karibu Admin! 🎉</h1>
+<h3>📊 Dashboard yako</h3>
+<ul>
+<li>✅ Website: <a href="https://dasarosafaris.github.io" target="_blank">dasarosafaris.github.io</a> - LIVE</li>
+<li>📱 WhatsApp Bookings: Zinaingia moja kwa moja WhatsApp yako +255757836048</li>
+<li>💰 Packages: 3 active (3 Days $850, 5 Days $1350, Kili $1800)</li>
+<li>👁️ Visitors: Wanaiona website sasa</li>
+</ul>
+<h3>⚙️ Unachoweza kufanya:</h3>
+<p>1. <b>Kubadilisha bei:</b> Nenda GitHub → index.html → Edit → Badilisha $850</p>
+<p>2. <b>Kuongeza package:</b> Copy card moja → Paste → Badilisha jina/picha</p>
+<p>3. <b>Kuona messages:</b> Wateja wote wanatuma WhatsApp kwako moja kwa moja</p>
+<p>4. <b>Logo:</b> Rename file yako kuwa logo.jpeg ili ionekane vizuri</p>
+<br>
+<a href="https://github.com/dasarosafaris/dasarosafaris.github.io" style="background:#2c5530;color:white;padding:10px 20px;text-decoration:none;border-radius:8px">Nenda GitHub Editor</a>
+<br><br>
+<button onclick="logout()" style="background:#999">Logout</button>
+</div>
+</div>
+
+<script>
+function login(){
+if(document.getElementById('pass').value==='admin123'){
+document.getElementById('loginBox').classList.add('hidden');
+document.getElementById('dash').classList.remove('hidden');
+}else{alert('Password si sahihi! Jaribu: admin123');}
+}
+function logout(){location.reload();}
+</script>
+</body>
+</html>
